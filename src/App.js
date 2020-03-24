@@ -1,24 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+
+import {
+  faClipboard,
+  faClipboardCheck,
+  faSync
+} from "@fortawesome/free-solid-svg-icons";
+
+import React from "react";
+import { generators } from "./generators/";
+import { library } from "@fortawesome/fontawesome-svg-core";
+
+library.add(faClipboard, faClipboardCheck, faSync);
 
 function App() {
+  const groups = generators.map((Generator, idx) => <Generator key={idx} />);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 className="App-title">Password generator</h1>
+      <div className="App-groups">{groups}</div>
     </div>
   );
 }
