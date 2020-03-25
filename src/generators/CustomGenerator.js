@@ -9,13 +9,30 @@ class CustomGenerator extends BaseGenerator {
 
   constructor(props) {
     super(props);
+    const charSet =
+      localStorage.getItem("CustomGeneratorCharSet") ||
+      "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$";
+    const length = localStorage.getItem("CustomGeneratorLength") || 8;
     this.state = {
-      charSet:
-        "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$",
-      length: 8
+      charSet: charSet,
+      length: parseInt(length, 10)
     };
     this.onCharSetChange = this.onCharSetChange.bind(this);
     this.onLengthChange = this.onLengthChange.bind(this);
+    this.saveToLocalStorage = this.saveToLocalStorage.bind(this);
+  }
+  saveToLocalStorage() {
+    localStorage.setItem("CustomGeneratorCharSet", this.state.charSet);
+    localStorage.setItem("CustomGeneratorLength", this.state.length);
+  }
+
+  componentDidMount() {
+    window.addEventListener("beforeunload", this.saveToLocalStorage);
+  }
+
+  componentWillUnmount() {
+    this.saveToLocalStorage();
+    window.removeEventListener("beforeunload", this.saveToLocalStorage);
   }
 
   onCharSetChange(charSet) {
