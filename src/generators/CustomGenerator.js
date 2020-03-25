@@ -28,11 +28,13 @@ class CustomGenerator extends BaseGenerator {
 
   componentDidMount() {
     window.addEventListener("beforeunload", this.saveToLocalStorage);
+    window.addEventListener("pagehide", this.saveToLocalStorage);
   }
 
   componentWillUnmount() {
     this.saveToLocalStorage();
     window.removeEventListener("beforeunload", this.saveToLocalStorage);
+    window.removeEventListener("pagehide", this.saveToLocalStorage);
   }
 
   onCharSetChange(charSet) {
