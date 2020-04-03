@@ -1,34 +1,19 @@
 import BaseGenerator from "./BaseGenerator";
 import React from "react";
-import dictionary from "../data/dictionary.txt";
+import { generateMnemonic } from "bip39";
 
 class XKCDPasswordGenerator extends BaseGenerator {
   ready = false;
   title = (<a href="https://xkcd.com/936/">XKCD Password</a>);
   description = "Cool and memorable passphrase.";
-  constructor(props) {
-    super(props);
-    this.loadDictionary = this.loadDictionary.bind(this);
-    this.state = { loaded: false };
-  }
-  loadDictionary = async () => {
-    const response = await fetch(dictionary);
-    const text = await response.text();
-    this.dictionary = text.split("\n");
-    this.setState({ loaded: true });
-  };
+
   generate() {
-    if (!this.state.loaded) return "";
-    return new Array(4)
-      .fill()
-      .map(
-        () =>
-          this.dictionary[Math.floor(Math.random() * this.dictionary.length)]
-      )
+    const mnemonic = generateMnemonic();
+    return mnemonic
+      .trim()
+      .split(/\s+/g)
+      .slice(0, 4)
       .join("-");
-  }
-  componentDidMount() {
-    this.loadDictionary();
   }
 }
 
