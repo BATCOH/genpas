@@ -2,6 +2,19 @@
 
 Thats it. Generate random passwords in your browser.
 
+### [Latest Live Version](https://batcoh.github.io/genpas/)
+
+## Features
+
+- Offline mode. Open page once and use it anywhere anytime.
+- [Automatic Dark theme](https://caniuse.com/#feat=prefers-color-scheme) in supported browsers.
+
+## Privacy
+
+- All passwords generates with JavaScript in your browser
+- Live version stored in Github Pages with SSL encryption
+- There are no third-party analytics or spy scripts included
+
 ## Credits
 
 XKCD passwords generates with [BIP39 JS implementation](https://github.com/bitcoinjs/bip39#readme), ISC License.
