@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.com/BATCOH/genpas.svg?branch=master)](https://travis-ci.com/BATCOH/genpas)
+[![Donate](https://img.shields.io/badge/buymeacoffee-donate-yellow.svg)](https://www.buymeacoffee.com/BATCOH)
+
 # Password Generator
 
 Thats it. Generate random passwords in your browser.
