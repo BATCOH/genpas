@@ -11,7 +11,9 @@ class Password extends React.Component {
     this.onFocus = this.onFocus.bind(this);
   }
   onFocus() {
-    this.domRef.current.select();
+    setTimeout(() => {
+      this.domRef.current.select();
+    }, 100);
   }
 
   render() {
