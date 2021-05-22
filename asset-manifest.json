@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/genpas/static/css/main.b96d8434.chunk.css",
+    "main.js": "/genpas/static/js/main.7e2b9271.chunk.js",
+    "main.js.map": "/genpas/static/js/main.7e2b9271.chunk.js.map",
+    "runtime-main.js": "/genpas/static/js/runtime-main.fb9c0484.js",
+    "runtime-main.js.map": "/genpas/static/js/runtime-main.fb9c0484.js.map",
+    "static/js/2.9f16ed65.chunk.js": "/genpas/static/js/2.9f16ed65.chunk.js",
+    "static/js/2.9f16ed65.chunk.js.map": "/genpas/static/js/2.9f16ed65.chunk.js.map",
+    "index.html": "/genpas/index.html",
+    "static/css/main.b96d8434.chunk.css.map": "/genpas/static/css/main.b96d8434.chunk.css.map",
+    "static/js/2.9f16ed65.chunk.js.LICENSE.txt": "/genpas/static/js/2.9f16ed65.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fb9c0484.js",
+    "static/js/2.9f16ed65.chunk.js",
+    "static/css/main.b96d8434.chunk.css",
+    "static/js/main.7e2b9271.chunk.js"
+  ]
+}
