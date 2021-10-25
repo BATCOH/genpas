@@ -38,9 +38,9 @@
   },
   "devDependencies": {
     "react-app-rewired": "^2.1.8",
-    "stylelint": "^13.13.1",
+    "stylelint": "^14.0.0",
     "stylelint-config-rational-order": "^0.1.2",
-    "stylelint-config-recommended": "^5.0.0",
-    "stylelint-order": "^4.1.0"
+    "stylelint-config-recommended": "^6.0.0",
+    "stylelint-order": "^5.0.0"
   }
 }
