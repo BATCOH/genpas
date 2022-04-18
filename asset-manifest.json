@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/genpas/static/css/main.38f9d4d5.css",
+    "main.js": "/genpas/static/js/main.027e5674.js",
+    "index.html": "/genpas/index.html",
+    "main.38f9d4d5.css.map": "/genpas/static/css/main.38f9d4d5.css.map",
+    "main.027e5674.js.map": "/genpas/static/js/main.027e5674.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.38f9d4d5.css",
+    "static/js/main.027e5674.js"
+  ]
+}
