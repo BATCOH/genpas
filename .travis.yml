@@ -1,3 +1,5 @@
+os: "linux"
+dist: "jammy"
 language: node_js
 node_js:
   - "stable"
@@ -7,9 +9,9 @@ cache:
 script:
   - npm run build
 deploy:
+  strategy: git
   provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN
+  token: $GITHUB_TOKEN
   local_dir: build
   on:
     branch: master
